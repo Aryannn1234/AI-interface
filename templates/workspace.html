@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Pixels AI Workspace</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/workspace.css') }}">
+
+</head>
+
+<body>
+
+<div class="background-blur"></div>
+
+<div class="workspace-page">
+
+    <!-- ==========================
+            NAVBAR
+    =========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-box">
+
+                <span class="pixel p1"></span>
+                <span class="pixel p2"></span>
+                <span class="pixel p3"></span>
+                <span class="pixel p4"></span>
+
+            </div>
+
+            <div>
+
+                <h2>Pixels AI Studio</h2>
+                <small>AI Vision Platform</small>
+
+            </div>
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+
+                <a href="/">
+
+                    Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/workspace"
+                   class="active">
+
+                    Workspace
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ==========================
+            HEADER
+    =========================== -->
+
+    <section class="workspace-header">
+
+        <span class="workspace-badge">
+
+            AI Powered Image Intelligence
+
+        </span>
+
+        <h1>
+
+            Pixels AI Workspace
+
+        </h1>
+
+        <p>
+
+            Upload an image and let Pixels AI analyze it using
+            TensorFlow and MobileNetV2 in real time.
+
+        </p>
+
+    </section>
+
+    <!-- ==========================
+          DASHBOARD STARTS
+    =========================== -->
+
+    <section class="workspace-dashboard">
+
+        <!-- LEFT SIDE -->
+
+        <div class="upload-panel">
+
+            <div class="panel-header">
+
+                <h2>
+
+                    Upload Image
+
+                </h2>
+
+                <p>
+
+                    PNG • JPG • JPEG
+
+                </p>
+
+            </div>
+
+            <label
+                for="imageInput"
+                class="upload-area">
+
+                <div class="upload-content">
+
+                   <div class="upload-icon">
+
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+<path d="M12 16V4"></path>
+
+<path d="M7 9L12 4L17 9"></path>
+
+<path d="M4 20H20"></path>
+
+</svg>
+
+</div>
+
+                    <h3>
+
+                        Drag & Drop
+
+                    </h3>
+
+                    <p>
+
+                        or click anywhere to browse
+
+                    </p>
+
+                </div>
+
+                <img id="preview">
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                    hidden>
+
+            </label>
+
+            <button id="predictBtn"
+                    class="primary-btn">
+
+                Analyze Image
+
+            </button>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="analysis-panel">
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-top">
+
+                    <div>
+
+                        <h2>
+
+                            AI Dashboard
+
+                        </h2>
+
+                        <p>
+
+                            Real-time Prediction Engine
+
+                        </p>
+
+                    </div>
+
+                    <div class="status-box">
+
+                        <span class="status-dot"></span>
+
+                        <span id="statusText">
+
+                            Ready
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <span>
+
+                            Model
+
+                        </span>
+
+                        <h3>
+
+                            MobileNetV2
+
+                        </h3>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <span>
+
+                            Framework
+
+                        </span>
+
+                        <h3>
+
+                            TensorFlow
+
+                        </h3>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <span>
+
+                            Input Size
+
+                        </span>
+
+                        <h3>
+
+                            224 × 224
+
+                        </h3>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <span>
+
+                            Inference
+
+                        </span>
+
+                        <h3>
+
+                            <span id="time">
+
+                                0
+
+                            </span>
+
+                            sec
+
+                        </h3>
+
+                    </div>
+
+                </div>
+                                <!-- Confidence Circle -->
+
+                <div class="confidence-section">
+
+                    <div class="confidence-ring">
+
+                        <div class="confidence-inner">
+
+                            <span id="confidenceValue">
+
+                                0%
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="confidence-text">
+
+                        <h3>
+
+                            Confidence Score
+
+                        </h3>
+
+                        <p>
+
+                            Waiting for analysis...
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Loading -->
+
+                <div id="loading">
+
+                    <div class="spinner"></div>
+
+                    <p>
+
+                        Pixels AI is analyzing your image...
+
+                    </p>
+
+                </div>
+
+                <!-- Prediction Results -->
+
+                <div id="result">
+
+                    <div class="result-header">
+
+                        <h2>
+
+                            Top Predictions
+
+                        </h2>
+
+                    </div>
+
+                    <div id="predictionList">
+
+                    </div>
+
+                </div>
+
+                <!-- AI Insight -->
+
+                <div class="insight-card">
+
+                    <h2>
+
+                        AI Insight
+
+                    </h2>
+
+                    <p id="aiInsight">
+
+                        Upload an image and Pixels AI will generate
+                        intelligent insights based on the prediction.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Bottom Button -->
+
+    <div class="bottom-actions">
+
+        <button
+            id="resetBtn"
+            class="secondary-btn"
+            style="display:none;">
+
+            Analyze Another Image
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

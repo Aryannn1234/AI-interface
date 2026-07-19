@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pixels AI Studio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <canvas id="networkCanvas"></canvas>
+
+<div class="background-blur one"></div>
+<div class="background-blur two"></div>
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-box">
+
+            <span class="pixel p1"></span>
+            <span class="pixel p2"></span>
+            <span class="pixel p3"></span>
+            <span class="pixel p4"></span>
+
+        </div>
+
+        <div>
+
+            <h2>Pixels AI Studio</h2>
+            <small>AI Vision Platform</small>
+
+        </div>
+
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+
+            <a href="/" class="active">
+
+                Home
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="#features">
+
+                Features
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="/workspace">
+
+                Workspace
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+<section class="hero">
+
+    <div class="hero-glow"></div>
+
+    <div class="hero-logo">
+
+       <div class="pixel-grid">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <span></span>
+    <span class="center"></span>
+    <span></span>
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+    </div>
+
+    <span class="hero-badge">
+
+        AI Powered Computer Vision
+
+    </span>
+
+    <h1>
+
+        PIXELS AI STUDIO
+
+    </h1>
+
+    <h2>
+
+        See the World Through AI
+
+    </h2>
+
+    <p>
+
+        Experience intelligent computer vision powered by TensorFlow and
+        MobileNetV2. Upload an image and discover how artificial
+        intelligence understands the world around us in real time.
+
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="/workspace" class="primary-btn">
+
+             Launch Workspace
+
+        </a>
+
+        <a href="#features" class="secondary-btn">
+
+            Explore Features
+
+        </a>
+
+    </div>
+
+    <div class="tech-stack">
+
+        <span>TensorFlow</span>
+
+        <span>Flask</span>
+
+        <span>Python</span>
+
+        <span>MobileNetV2</span>
+
+    </div>
+
+</section>
+<section class="powered-by">
+
+    <p class="powered-title">
+
+        POWERED BY
+
+    </p>
+
+    <div class="tech-logos">
+
+        <span>TensorFlow</span>
+
+        <span>Python</span>
+
+        <span>Flask</span>
+
+        <span>NumPy</span>
+
+        <span>MobileNetV2</span>
+
+        <span>HTML5</span>
+
+        <span>CSS3</span>
+
+        <span>JavaScript</span>
+
+    </div>
+
+</section>
+<section id="features" class="features">
+
+    <div class="section-title">
+
+        <span>WHY PIXELS AI?</span>
+
+        <h2>Built for Speed. Designed for Intelligence.</h2>
+
+        <p>
+            Combining modern computer vision with an elegant interface,
+            Pixels AI Studio delivers a seamless AI experience.
+        </p>
+
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+
+                🧠
+
+            </div>
+
+            <h3>Intelligent Vision</h3>
+
+            <p>
+
+                Recognizes more than 1000 real-world objects
+                using TensorFlow MobileNetV2.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+
+                ⚡
+
+            </div>
+
+            <h3>Lightning Fast</h3>
+
+            <p>
+
+                Optimized for rapid inference with minimal latency,
+                delivering results in seconds.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+
+                🎯
+
+            </div>
+
+            <h3>Reliable Results</h3>
+
+            <p>
+
+                Displays Top 5 predictions,
+                confidence scores and AI insights.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="workflow" id="workflow">
+
+    <div class="section-title">
+
+        <span>HOW IT WORKS</span>
+
+        <h2>From Pixels to Predictions</h2>
+
+        <p>
+
+            Every uploaded image passes through our AI pipeline before
+            producing accurate predictions in real time.
+
+        </p>
+
+    </div>
+
+    <div class="workflow-container">
+
+        <div class="workflow-step">
+
+            <div class="step-circle">
+
+                📤
+
+            </div>
+
+            <h3>Upload</h3>
+
+            <p>
+
+                Select any JPG, PNG or JPEG image.
+
+            </p>
+
+        </div>
+
+        <div class="workflow-arrow">
+
+            →
+
+        </div>
+
+        <div class="workflow-step">
+
+            <div class="step-circle">
+
+                🖼️
+
+            </div>
+
+            <h3>Preprocess</h3>
+
+            <p>
+
+                Image is resized to 224 × 224 for the AI model.
+
+            </p>
+
+        </div>
+
+        <div class="workflow-arrow">
+
+            →
+
+        </div>
+
+        <div class="workflow-step">
+
+            <div class="step-circle">
+
+                🧠
+
+            </div>
+
+            <h3>Deep Learning</h3>
+
+            <p>
+
+                MobileNetV2 extracts important visual features.
+
+            </p>
+
+        </div>
+
+        <div class="workflow-arrow">
+
+            →
+
+        </div>
+
+        <div class="workflow-step">
+
+            <div class="step-circle">
+
+                🎯
+
+            </div>
+
+            <h3>Prediction</h3>
+
+            <p>
+
+                AI predicts the most likely object categories.
+
+            </p>
+
+        </div>
+
+        <div class="workflow-arrow">
+
+            →
+
+        </div>
+
+        <div class="workflow-step">
+
+            <div class="step-circle">
+
+                📊
+
+            </div>
+
+            <h3>Insights</h3>
+
+            <p>
+
+                Confidence scores and inference time are displayed.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="stats">
+
+    <div class="section-title">
+
+        <span>AI BY THE NUMBERS</span>
+
+        <h2>Performance That Speaks for Itself</h2>
+
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <h3 class="counter" data-target="1000">0</h3>
+
+            <p>Recognizable Objects</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>0.15s</h3>
+
+            <p>Average Inference</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Top 5</h3>
+
+            <p>Predictions Displayed</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>100%</h3>
+
+            <p>Responsive Design</p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="demo-section" id="demo">
+
+    <div class="section-title">
+
+        <span>WORKSPACE PREVIEW</span>
+
+        <h2>Experience Pixels AI Workspace</h2>
+
+        <p>
+
+            A miniature preview of the intelligent workspace you'll use for real-time image analysis.
+
+        </p>
+
+    </div>
+
+    <div class="workspace-preview">
+
+        <div class="preview-header">
+
+            <div class="preview-logo">
+
+                <span class="dot"></span>
+
+                Pixels AI Workspace
+
+            </div>
+
+            <span class="preview-status">
+
+                Live Preview
+
+            </span>
+
+        </div>
+
+        <div class="preview-body">
+
+            <!-- LEFT -->
+
+            <div class="mini-upload">
+
+                <h3>Upload Image</h3>
+
+                <div class="mini-upload-box">
+
+                    <div class="mini-upload-icon">
+
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                            <path d="M12 16V4"></path>
+                            <path d="M7 9L12 4L17 9"></path>
+                            <path d="M4 20H20"></path>
+
+                        </svg>
+
+                    </div>
+
+                    <p>
+
+                        Drag & Drop
+
+                    </p>
+
+                </div>
+
+                <button class="primary-btn">
+
+                    Analyze Image
+
+                </button>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="mini-dashboard">
+
+                <div class="mini-confidence">
+
+    <div class="mini-ring">
+
+        <span>0%</span>
+
+    </div>
+
+    <div>
+
+        <h3>
+
+            Confidence Score
+
+        </h3>
+
+        <p>
+
+            Waiting for Analysis...
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="mini-predictions">
+
+    <div class="prediction-row">
+
+        <span>Status</span>
+
+        <span>Waiting</span>
+
+    </div>
+
+    <div class="progress">
+
+        <div class="progress-fill" style="width:0%;"></div>
+
+    </div>
+
+    <div class="prediction-row">
+
+        <span>Predictions</span>
+
+        <span>--</span>
+
+    </div>
+
+    <div class="progress">
+
+        <div class="progress-fill" style="width:0%;"></div>
+
+    </div>
+
+    <div class="prediction-row">
+
+        <span>Inference Time</span>
+
+        <span>0 sec</span>
+
+    </div>
+
+    <div class="progress">
+
+        <div class="progress-fill" style="width:0%;"></div>
+
+    </div>
+
+</div>
+
+<div class="mini-insight">
+
+    <strong>AI Insight</strong>
+
+    <br><br>
+
+    Upload an image in the Pixels AI Workspace to begin
+    intelligent image analysis using TensorFlow MobileNetV2.
+
+</div>
+
+        </div>
+
+        <a href="/workspace" class="primary-btn preview-launch">
+
+            Launch Workspace →
+
+        </a>
+
+    </div>
+
+</section>
+<section class="about-ai" id="about">
+
+    <div class="about-left">
+
+        <div class="ai-logo">
+
+            <div class="core-circle"></div>
+
+            <div class="orbit orbit1"></div>
+            <div class="orbit orbit2"></div>
+            <div class="orbit orbit3"></div>
+
+        </div>
+
+    </div>
+
+    <div class="about-right">
+
+        <span>ABOUT PIXELS AI</span>
+
+        <h2>
+
+            More Than an Image Classifier
+
+        </h2>
+
+        <p>
+
+            Pixels AI Studio is a modern computer vision platform designed to
+            demonstrate how artificial intelligence understands images using
+            deep learning.
+
+        </p>
+
+        <p>
+
+            Built using TensorFlow, Flask and MobileNetV2, the platform
+            delivers real-time predictions with an elegant user experience
+            focused on performance and simplicity.
+
+        </p>
+
+        <div class="about-features">
+
+            <div>✔ Real-Time AI Inference</div>
+
+            <div>✔ TensorFlow Deep Learning</div>
+
+            <div>✔ Top 5 Predictions</div>
+
+            <div>✔ Modern Glass UI</div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="highlights">
+
+    <div class="section-title">
+
+        <span>PROJECT HIGHLIGHTS</span>
+
+        <h2>Why Pixels AI Studio Stands Out</h2>
+
+        <p>
+            Built with performance, intelligence and modern design at its core.
+        </p>
+
+    </div>
+
+    <div class="highlight-grid">
+
+        <div class="highlight-card">
+            <h3>🧠</h3>
+            <h4>AI Model</h4>
+            <p>TensorFlow MobileNetV2</p>
+        </div>
+
+        <div class="highlight-card">
+            <h3>⚡</h3>
+            <h4>Fast Inference</h4>
+            <p>Real-time predictions</p>
+        </div>
+
+        <div class="highlight-card">
+            <h3>🎯</h3>
+            <h4>Top Predictions</h4>
+            <p>Top 5 confidence scores</p>
+        </div>
+
+        <div class="highlight-card">
+            <h3>🎨</h3>
+            <h4>Modern UI</h4>
+            <p>Premium glassmorphism design</p>
+        </div>
+
+    </div>
+
+</section>
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+</body>
+
+</html>
